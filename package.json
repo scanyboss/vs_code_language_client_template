@@ -1,0 +1,60 @@
+{
+    "name": "xtext-template",
+    "displayName": "xtext-template",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "scanyboss",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    // todo specify file extension of the language in format: onLanguage:<fileExtension>
+    "activationEvents": [
+        "onLanguage:mydsl"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "languages": [
+            {
+                // todo specify file extension of the language
+                "id": "mydsl",
+                // todo specify file extension of the language
+                "aliases": [
+                    "mydsl"
+                ],
+                // todo specify file extension of the language in format .<fileExtension>
+                "extensions": [
+                    ".mydsl"
+                ],
+                "configuration": "./dsl.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                // todo specify file extension of the language
+                "language": "mydsl",
+                // todo specify file extension of the language in format: text.<fileExtension>
+                "scopeName": "text.mydsl",
+                "path": "./syntaxes/dsl.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^5.1.0"
+    }
+}
