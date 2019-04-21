@@ -9,7 +9,7 @@ import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-lan
 
 export function activate(context: ExtensionContext) {
     // TODO specify the language server name here - language server Fat JAR has to be located in `languageserver` directory
-    let languageServerName = "";
+    let languageServerName = "org.mealy.ide-1.0.0-SNAPSHOT-ls.jar";
 
     let serverOptions: ServerOptions = {
         run : { command: "java", args: ["-jar", context.asAbsolutePath(path.join('languageserver', languageServerName))] },
@@ -18,7 +18,7 @@ export function activate(context: ExtensionContext) {
     
     let clientOptions: LanguageClientOptions = {
         //TODO specify language server file extension name here
-        documentSelector: ['mydsl'],
+        documentSelector: ['ml'],
         synchronize: {
             fileEvents: workspace.createFileSystemWatcher('**/*.*')
         }

@@ -2,10 +2,10 @@
     // todo specify name of the language 
     "name": "MealyMachine",
     // todo specify file extension of the language in format: text.<fileExtension>
-    "scopeName": "text.mydsl",
+    "scopeName": "text.ml",
         // todo specify file extension of the language
     "fileTypes": [
-        "mydsl"
+        "ml"
     ],
     "repository": {
         "general": {
@@ -24,23 +24,23 @@
             
         "linecomment": {
             // todo specify file extension of the language in format: comment.line.double-dash.<fileExtension>
-            "name": "comment.line.double-dash.mydsl",
+            "name": "comment.line.double-dash.ml",
             "begin": "(^[ \\t]+)?(?=//)",
             "end": "(?=$)"
         },
            
         "blockcomment": {
              // todo specify file extension of the language in format: comment.block.<fileExtension>
-            "name": "comment.block.mydsl",
+            "name": "comment.block.ml",
             "begin": "/\\*(\\*)?(?!/)",
             "end": "\\*/"
         },
         
         "keyword": {
              // todo specify file extension of the language in format: keyword.control.<fileExtension>
-            "name": "keyword.control.mydsl",
+            "name": "keyword.control.ml",
              // todo specify keywords of the language, instead of print | where
-            "match": "\\b(print|where)\\b|!"
+            "match": "\\b(begin|end|produces|to|from|trans|define input set|define output set|define state set|when)\\b|!"
 
         }
     },
@@ -48,6 +48,5 @@
         {
             "include": "#general"
         }
-    ],
-    "uuid": "8383e49a-fa0d-4bb5-827b-10e8abb294ca"
+    ]
 }

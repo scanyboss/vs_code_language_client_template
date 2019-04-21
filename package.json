@@ -12,21 +12,21 @@
     ],
     // todo specify file extension of the language in format: onLanguage:<fileExtension>
     "activationEvents": [
-        "onLanguage:mydsl"
+        "onLanguage:ml"
     ],
     "main": "./out/extension",
     "contributes": {
         "languages": [
             {
                 // todo specify file extension of the language
-                "id": "mydsl",
+                "id": "ml",
                 // todo specify file extension of the language
                 "aliases": [
-                    "mydsl"
+                    "ml"
                 ],
                 // todo specify file extension of the language in format .<fileExtension>
                 "extensions": [
-                    ".mydsl"
+                    ".ml"
                 ],
                 "configuration": "./dsl.configuration.json"
             }
@@ -34,9 +34,9 @@
         "grammars": [
             {
                 // todo specify file extension of the language
-                "language": "mydsl",
+                "language": "ml",
                 // todo specify file extension of the language in format: text.<fileExtension>
-                "scopeName": "text.mydsl",
+                "scopeName": "text.ml",
                 "path": "./syntaxes/dsl.tmLanguage.json"
             }
         ]
